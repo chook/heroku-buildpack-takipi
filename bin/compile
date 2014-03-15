@@ -6,13 +6,13 @@ BUILD_DIR=$1
 
 takipi_common_install()
 {
-	TAKIPI_FILE=takipi-latest-heroku.tar.gz
+	TAKIPI_FILE=takipi-heroku-3.4.9.tar.gz
 	
 	TAKIPI_BASE=$1
 	TAKIPI_HOME="${TAKIPI_BASE}"/.takipi
 	mkdir -p "${TAKIPI_HOME}"
 	
-	curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/app-takipi-com/deploy/linux/$TAKIPI_FILE >/dev/null 2>&1
+	curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/david.sparktale/sam/snapshots/3.4.9/$TAKIPI_FILE >/dev/null 2>&1
 
 	if [ $? -eq 0 ]; then
 		[ "$VERBOSE" = "1" ] && echo "File downloaded successfully"
