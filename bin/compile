@@ -24,6 +24,9 @@ takipi_common_install()
 	# Unpacking tarball into base dir
 	tar pzxf $TAKIPI_FILE -C "${TAKIPI_BASE}"
 	
+	# XXX Fix for bad SAM Heroku build
+	cp -r ~/home/chen/tmp/takipi-package/* ~/.takipi 
+	
 	rm -Rf $TAKIPI_FILE >/dev/null 2>&1 # Cleanup
 
 	PROFILE_PATH="$BUILD_DIR/.profile.d/takipi.sh"
