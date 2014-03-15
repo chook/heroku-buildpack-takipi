@@ -25,7 +25,7 @@ takipi_common_install()
 	tar pzxf $TAKIPI_FILE -C "${TAKIPI_BASE}"
 	
 	# XXX Fix for bad SAM Heroku build
-	cp -r ~/home/chen/tmp/takipi-package/* ~/.takipi 
+	cp -r ${TAKIPI_BASE}/home/chen/tmp/takipi-package/* ${TAKIPI_BASE}/.takipi 
 	
 	rm -Rf $TAKIPI_FILE >/dev/null 2>&1 # Cleanup
 
