@@ -26,6 +26,8 @@ takipi_common_install()
 	
 	# XXX Fix for bad SAM Heroku build
 	cp -r ${TAKIPI_BASE}/home/chen/tmp/takipi-package/* ${TAKIPI_BASE}/.takipi 
+	mkdir -p ${TAKIPI_BASE}/.takipi/log/agents
+	chmod 777 ${TAKIPI_BASE}/.takipi/log/agents 
 	
 	rm -Rf $TAKIPI_FILE >/dev/null 2>&1 # Cleanup
 
