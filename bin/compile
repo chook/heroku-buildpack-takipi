@@ -24,11 +24,12 @@ takipi_common_install()
 
 	# Unpacking tarball into base dir
 	tar pzxf $TAKIPI_FILE -C "${TAKIPI_BASE}"
-	
+	mv "${TAKIPI_BASE}"/takipi "${TAKIPI_BASE}"/.takipi
+
 	## XXX Fix for bad SAM Heroku build
-	cp -r ${TAKIPI_BASE}/home/chen/tmp/takipi-package/* ${TAKIPI_BASE}/.takipi 
-	mkdir -p ${TAKIPI_BASE}/.takipi/log/agents
-	chmod 777 ${TAKIPI_BASE}/.takipi/log/agents 
+	#cp -r ${TAKIPI_BASE}/home/chen/tmp/takipi-package/* ${TAKIPI_BASE}/.takipi 
+	#mkdir -p ${TAKIPI_BASE}/.takipi/log/agents
+	#chmod 777 ${TAKIPI_BASE}/.takipi/log/agents 
 	
 	rm -Rf $TAKIPI_FILE >/dev/null 2>&1 # Cleanup
 
