@@ -24,7 +24,7 @@ takipi_common_install()
 
 	# Unpacking tarball into base dir
 	tar pzxf $TAKIPI_FILE -C "${TAKIPI_BASE}"
-	echo "Chen " ${TAKIPI_BASE}
+	mv "${TAKIPI_BASE}/takipi" "${TAKIPI_BASE}/.takipi"
 
 	## XXX Fix for bad SAM Heroku build
 	#cp -r ${TAKIPI_BASE}/home/chen/tmp/takipi-package/* ${TAKIPI_BASE}/.takipi 
