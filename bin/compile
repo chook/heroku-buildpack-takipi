@@ -6,14 +6,14 @@ BUILD_DIR=$1
 
 takipi_common_install()
 {
-	TAKIPI_FILE=takipi-heroku-native.0.303.tar.gz
+	TAKIPI_FILE=takipi-heroku-native.0.302.tar.gz
 	#TAKIPI_FILE=takipi-latest-heroku.tar.gz
 
 	TAKIPI_BASE=$1
 	TAKIPI_HOME="${TAKIPI_BASE}"/.takipi
 	[ "$VERBOSE" = "1" ] && echo "Takipi base is ${TAKIPI_BASE}"
 
-	curl -s -o $TAKIPI_FILE -L http://sam.sparktale.s3.amazonaws.com/samv2/snapshots/native/native.0.303/takipi-heroku-native.0.303.tar.gz >/dev/null 2>&1
+	curl -s -o $TAKIPI_FILE -L http://sam.sparktale.s3.amazonaws.com/samv2/snapshots/native/native.0.302/takipi-heroku-native.0.302.tar.gz >/dev/null 2>&1
 	#curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/app-takipi-com/deploy/linux/$TAKIPI_FILE >/dev/null 2>&1
 	
 	if [ $? -eq 0 ]; then
