@@ -13,7 +13,7 @@ takipi_common_install()
 	TAKIPI_HOME="${TAKIPI_BASE}"/.takipi
 	[ "$VERBOSE" = "1" ] && echo "Takipi base is ${TAKIPI_BASE}"
 
-	curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/sam.sparktale/samv2/snapshots/native/native2.0.219/takipi-heroku-native2.0.219.tar.gz >/dev/null 2>&1
+	curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/sam.sparktale/samv2/snapshots/native/native2.0.219/takipi-native2.0.219.tar.gz >/dev/null 2>&1
 	#curl -s -o $TAKIPI_FILE -L https://s3.amazonaws.com/app-takipi-com/deploy/linux/$TAKIPI_FILE >/dev/null 2>&1
 	
 	if [ $? -eq 0 ]; then
@@ -47,7 +47,7 @@ takipi_common_install()
 
 	echo "export TAKIPI_HOME=/app/.takipi" >> $PROFILE_PATH
 
-	echo "takipi.t4c=true" >> /app/.takipi/agent.properties
+	echo "export TAKIPI_ARGS=takipi.t4c=true" >> $PROFILE_PATH
 
 	echo 'export PATH="/app/.takipi/bin:$PATH"' >> $PROFILE_PATH
 }
